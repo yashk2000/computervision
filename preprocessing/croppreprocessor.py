@@ -26,7 +26,7 @@ class CropPreprocessor:
 
         for (startX, startY, endX, endY) in coords:
             crop = image[startY:endY, startX:endX]
-            crop = cv2.resize(crop, (self.width, self.height), interploation=self.inter)
+            crop = cv2.resize(crop, (self.width, self.height), interpolation=self.inter)
             crops.append(crop)
 
         if self.horiz:
